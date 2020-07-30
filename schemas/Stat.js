@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const User = require('./User')
 module.exports = new mongoose.Schema({
     counts: {
         300: Number,
