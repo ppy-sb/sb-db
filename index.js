@@ -6,5 +6,6 @@ module.exports = (config) => {
         Channel: require('./models/Channel')(mongoose),
         Account: require('./models/Account')(mongoose),
         Stat: require('./models/Stat')(mongoose),
+        Setting: require('./models/Setting')(mongoose),
     }
 }
