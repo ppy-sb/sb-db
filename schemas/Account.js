@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 module.exports = new mongoose.Schema({
-    user: { _id: { type: mongoose.Types.ObjectId, unique: true } },
+    account: String,
     password: String,
+    user: { _id: mongoose.Types.ObjectId },
 })
