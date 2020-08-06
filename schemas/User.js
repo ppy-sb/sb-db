@@ -5,7 +5,7 @@ const schema = new mongoose.Schema({
     nick: { type: String, unique: true },
 })
 
-schema.methods.verify = async (name, password) => {
+schema.methods.check = async (name, password) => {
     const user = await mongoose.model('User').findOne({name}).exec()
     if(!user) return
     if(!await mongoose.model('Account').exists({ user:{ _id: user._id }, password })) return
