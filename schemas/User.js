@@ -5,10 +5,10 @@ const schema = new mongoose.Schema({
     nick: { type: String, unique: true },
 })
 
-schema.methods.check = async (name, password) => {
-    const user = await mongoose.model('User').findOne({name}).exec()
+schema.methods.check = async function(name, password) {
+    const user = await this.model('User').findOne({name}).exec()
     if(!user) return
-    if(!await mongoose.model('Account').exists({ user:{ _id: user._id }, password })) return
+    if(!await this.model('Account').exists({ user:{ _id: user._id }, password })) return
     return user
 }
 
