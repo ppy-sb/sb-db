@@ -7,6 +7,6 @@ module.exports = (config) => {
         Account: require('./models/Account')(mongoose),
         Stat: require('./models/Stat')(mongoose),
         Preference: require('./models/Preference')(mongoose),
-        Friends: require('./models/Friend')(mongoose),
+        Friend: require('./models/Friend')(mongoose),
     }
 }
