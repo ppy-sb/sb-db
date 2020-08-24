@@ -58,8 +58,7 @@ const {
             account: user._id,
             password,
             user
-        }, (() => {
-        }, {
+        },  {
             account: user.name,
             password,
             user
