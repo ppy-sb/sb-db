@@ -59,6 +59,11 @@ const {
             password,
             user
         }, (() => {
+        }, {
+            account: user.name,
+            password,
+            user
+        }, (() => {
             if (user.nick && user.nick.active) return ({
                 account: user.nick.name,
                 password,
