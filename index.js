@@ -8,5 +8,6 @@ module.exports = (config) => {
         Stat: require('./models/Stat')(mongoose),
         Preference: require('./models/Preference')(mongoose),
         Friend: require('./models/Friend')(mongoose),
+        Log: require('./models/Log')(mongoose),
     }
 }
